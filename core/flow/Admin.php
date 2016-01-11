@@ -1158,7 +1158,8 @@ class ShoppAdminListTable extends WP_List_Table {
 	}
 
 	public function page_navigation ( $which ) {
-		return call_user_func_array( array( $this, 'pagination' ), func_get_args() );
+		$args = func_get_args();
+		return call_user_func_array( array( $this, 'pagination' ), $args );
 	}
 
 }
